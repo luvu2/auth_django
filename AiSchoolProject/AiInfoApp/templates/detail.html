@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>detail</h1>
+  {% for student in student_obj_list %}
+  <a href = "{% url 'student' student.pk %}">
+    {{student.name}}
+  </a>
+    <br/>
+  {% endfor %}
+
+  <a href="{% url 'add' class_pk %}">학생 등록하기 > </a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>add</h1>
+  <form action="{% url 'add' class_pk %}" method="POST">
+    {% csrf_token %}
+    <input placeholder="이름을 입력하세요" name="name" />
+    <br/>
+    <br/>
+    <input placeholder="전화번호를 입력하세요" name="phone_num" />
+    <br/>
+    <br/>
+    <textarea name='intro' ></textarea>
+    <br/>
+    <br/>
+    <button type="submit">등록하기 > </button>
+  </form>
+</body>
+</html>
